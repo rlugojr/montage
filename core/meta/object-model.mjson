@@ -1,0 +1,104 @@
+{
+    "object_descriptor_reference": {
+        "prototype": "core/meta/object-descriptor-reference",
+        "properties": {
+            "valueReference": {
+                "objectDescriptorName": "ObjectDescriptor",
+                "prototypeName": "ObjectDescriptor",
+                "objectDescriptorModule": {
+                    "%": "core/meta/object-descriptor.mjson"
+                }
+            }
+        }
+    },
+    "objectModel_objectDescriptors": {
+        "prototype": "core/meta/property-descriptor",
+        "properties": {
+            "name": "objectDescriptors",
+            "objectDescriptor": {
+                "@": "root"
+            },
+            "cardinality": -1,
+            "mandatory": false,
+            "denyDelete": false,
+            "readOnly": false,
+            "valueType": "set",
+            "enumValues": [],
+            "helpKey": "",
+            "valueDescriptor": {
+                "@": "object_descriptor_reference"
+            }
+        }
+    },
+    "objectModel_name": {
+        "prototype": "core/meta/property-descriptor",
+        "properties": {
+            "name": "name",
+            "objectDescriptor": {
+                "@": "root"
+            },
+            "cardinality": 1,
+            "mandatory": true,
+            "denyDelete": false,
+            "readOnly": true,
+            "valueType": "string",
+            "enumValues": [],
+            "helpKey": ""
+        }
+    },
+    "objectModel_objectModelInstanceModuleId": {
+        "prototype": "core/meta/property-descriptor",
+        "properties": {
+            "name": "objectModelInstanceModuleId",
+            "objectDescriptor": {
+                "@": "root"
+            },
+            "cardinality": 1,
+            "mandatory": true,
+            "denyDelete": false,
+            "readOnly": false,
+            "valueType": "string",
+            "enumValues": [],
+            "helpKey": ""
+        }
+    },
+    "root": {
+        "prototype": "core/meta/module-object-descriptor",
+        "properties": {
+            "name": "ObjectModel",
+            "customPrototype": false,
+            "propertyDescriptors": [
+                {
+                    "@": "objectModel_name"
+                },
+                {
+                    "@": "objectModel_objectDescriptors"
+                },
+                {
+                    "@": "objectModel_objectModelInstanceModuleId"
+                }
+            ],
+            "propertyDescriptorGroups": {
+                "objectModel": [
+                    {
+                        "@": "objectModel_name"
+                    },
+                    {
+                        "@": "objectModel_objectDescriptors"
+                    },
+                    {
+                        "@": "objectModel_objectModelInstanceModuleId"
+                    }
+                ]
+            },
+            "propertyValidationRules": {},
+            "objectDescriptorModule": {
+                "%": "core/meta/object-model.mjson"
+            },
+            "exportName": "ObjectModel",
+            "module": {
+                "%": "core/meta/object-model"
+            }
+        }
+    }
+}

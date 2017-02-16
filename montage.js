@@ -11,7 +11,7 @@ if (typeof window !== "undefined") {
                 count: 0,
                 start: 0,
                 sum:0
-            }
+            };
             this._groupTime[name] = groupTimeEntry;
         }
         groupTimeEntry.start = performance.now();
@@ -23,19 +23,19 @@ if (typeof window !== "undefined") {
 
         groupTimeEntry.count = groupTimeEntry.count+1;
         groupTimeEntry.sum = groupTimeEntry.sum+time;
-    }
+    };
     console.groupTimeAverage = function(name) {
         var groupTimeEntry = this._groupTime[name];
         return groupTimeEntry.sum/groupTimeEntry.count;
-    }
+    };
     console.groupTimeTotal = function(name) {
         var groupTimeEntry = this._groupTime[name];
         return groupTimeEntry.sum;
-    }
+    };
     console.groupTimeCount = function(name) {
         var groupTimeEntry = this._groupTime[name];
         return groupTimeEntry.count;
-    }
+    };
 
 }
 
@@ -431,7 +431,7 @@ if (!String.prototype.endsWith) {
 
                 var keys = Object.keys(exports),
                     i, object;
-                for (var i=0, name;(name=keys[i]); i++) {
+                for (i=0, name;(name=keys[i]); i++) {
                     // avoid attempting to initialize a non-object
                     if (((object = exports[name]) instanceof Object)) {
                         // avoid attempting to reinitialize an aliased property
@@ -451,7 +451,7 @@ if (!String.prototype.endsWith) {
     };
 
     var reelExpression = /([^\/]+)\.reel$/,
-        dotREEL = ".reel"
+        dotREEL = ".reel",
         SLASH = "/";
     /**
      * Allows reel directories to load the contained eponymous JavaScript
@@ -548,7 +548,7 @@ if (!String.prototype.endsWith) {
         makeResolve: function () {
 
           if(this._hasURLSupport()) {
-            return URLMakeResolve
+            return URLMakeResolve;
           }
           else {
             var head = document.querySelector("head"),
